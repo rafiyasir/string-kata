@@ -25,4 +25,11 @@ describe("String Kata",()=>{
         const res = sum("//;\n1;2");
         expect(res).toEqual(3);
     })
+    it("should return negative numbers not allowed -2 for '1,3,-2'",()=> {
+        expect(() => sum("1,3,-2")).toThrow('negative numbers not allowed -2')
+    })
+    
+    it("should return negative numbers not allowed -2, -3 for '1,3,-2,-3'",()=> {
+        expect(() => sum("1,3,-2,-3")).toThrow('negative numbers not allowed -2, -3')
+    })
 })
