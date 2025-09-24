@@ -21,4 +21,8 @@ describe("String Kata",()=>{
         const res = sum("1\n2\n3,4\n5,6\n7\n8");
         expect(res).toEqual(36);
     })
+    it("should return 3 for '//;\n1;2'",()=>{
+        const res = sum("//;\n1;2");
+        expect(res).toEqual(3);
+    })
 })
