@@ -36,9 +36,16 @@ describe("String Kata",()=>{
         const res = sum("2,1001")
         expect(res).toEqual(2);
     })
-    
     it("should return 6 for '//[***]\n1***2***3'",()=>{
         const res = sum("//[***]\n1***2***3");
         expect(res).toEqual(6);
+    })
+    it("should return 6 for '//[*][%]\n1*2%3'",()=>{
+        const res = sum("//[*][%]\n1*2%3");
+        expect(res).toEqual(6);
+    })
+    it("should return 10 for '//[*%][%%][**]\n1*%2%%3**4'",()=>{
+        const res = sum("//[*%][%%][**]\n1*%2%%3**4");
+        expect(res).toEqual(10);
     })
 })
