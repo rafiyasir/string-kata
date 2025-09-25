@@ -6,7 +6,7 @@ export const getSum = (req: Request, res: Response) => {
         if (!req.query.str) {
             return res.status(400).json({ message: "Invalid request" })
         }
-         const queryStr = JSON.parse(req.query.str as string)
+         const queryStr = req.query.str as string
         const total = sum(queryStr);
         return res.status(200).json({ total })
     } catch (error) {

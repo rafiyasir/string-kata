@@ -28,7 +28,7 @@ npm run dev
 ### CURL example
 
 ```bash
-curl --location 'https://string-kata.up.railway.app/api/sum?str=%22-1%2C-2%22'
+curl --location 'https://string-kata.up.railway.app/api/sum?str=-1%2C-2'
 ```
 
 ---
