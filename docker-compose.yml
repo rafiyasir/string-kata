@@ -1,0 +1,19 @@
+services:
+  nginx:
+    depends_on:
+      - api
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - '80:80'
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: ./server
+  client:
+    build:
+      dockerfile: Dockerfile
+      context: ./client
