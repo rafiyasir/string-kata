@@ -32,4 +32,8 @@ describe("String Kata",()=>{
     it("should return negative numbers not allowed -2, -3 for '1,3,-2,-3'",()=> {
         expect(() => sum("1,3,-2,-3")).toThrow('negative numbers not allowed -2, -3')
     })
+    it("should not add when number greater than 1000",() => {
+        const res = sum("2,1001")
+        expect(res).toEqual(2);
+    })
 })

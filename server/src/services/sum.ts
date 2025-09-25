@@ -16,7 +16,7 @@ export function sum(str: string) {
         for (let num of strArr) {
             if (Number(num) < 0) {
                 negativeNumbers.push(num);
-            } else {
+            } else if(Number(num) < 1001){
                 sum += Number(num);
             }
         }
