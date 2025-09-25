@@ -8,7 +8,7 @@ export function createApp() {
 
     app.get("/",(req,res)=>res.status(200).json({ status: 'ok' }));
 
-    app.get("/api/sum",getSum);
+    app.get("/sum",getSum);
 
     return app;
 }

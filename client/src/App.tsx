@@ -6,8 +6,6 @@ export default function StringKata() {
   const [result, setResult] = useState("");
 
 
-  const BASE_URL = "https://string-kata.up.railway.app";
-
   const handleSubmit = async () => {
     if (!query.trim()) {
       setResult("Please add your string");
@@ -15,7 +13,7 @@ export default function StringKata() {
     }
 
     try {
-      const res = await fetch(`${BASE_URL}/api/sum?str=${query}`);
+      const res = await fetch(`/api/sum?str=${query}`);
       const data = await res.json();
       setResult(JSON.stringify(data));
     } catch (err) {
