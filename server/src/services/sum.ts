@@ -6,9 +6,13 @@ export function sum(str: string) {
     let numberStr = str;
     let delimiter = ','
     let negativeNumbers = [];
-    if (str.startsWith("//")) {
+    const newlineIndex = str.indexOf('\n');
+    if (str.startsWith("//") && !(str.startsWith("//["))) {
         delimiter = str.slice(2, 3);
-        numberStr = str.slice(4);
+        numberStr = str.slice(newlineIndex);
+    } else if(str.startsWith("//[")){
+        delimiter= str.slice(3,str.indexOf(']'));
+        numberStr = str.slice(newlineIndex)
     }
     const strArrByNL = numberStr.split("\n");
     for (const nlNum of strArrByNL) {
